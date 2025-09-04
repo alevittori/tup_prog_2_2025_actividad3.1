@@ -8,28 +8,39 @@ namespace Ejercicio1.Models
 {
     internal class Gallina : Ave
     {
+        Random raciones = new Random();
         public override void Comer()
         {
             if (TieneHambre)
             {
                 //come
-                historialAcciones.Add("La gallina come")
+                historialAcciones.Add("La gallina come");
+                int h = PoneHuevo();
+                historialAcciones.Add($"La gallina puso {h} huevos hoy.");
             }
             else
             {
+                historialAcciones.Add("la gallina no tiene hambre");
                 //no come, no tiene hambre
             }
            
         }
-
-
-        public override void PoneHuevo()
+        public override int PoneHuevo()
         {
-            throw new NotImplementedException();
-        }
-    }
-        public override List<string> CorrerRutina()
-        {
+            int racion = raciones.Next();
+            int huevo = raciones.Next(0, racion);
+
+            return huevo;
+
             
         }
+
+        public override List<string> CorrerRutina()
+        {
+            return historialAcciones;
+            
+        }
+
+    }
+        
 }
