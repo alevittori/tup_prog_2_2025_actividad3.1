@@ -53,6 +53,9 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Animalito.cs" />
+    <Compile Include="Models\Ave.cs" />
+    <Compile Include="Models\Benteveo.cs" />
+    <Compile Include="Models\Gallina.cs" />
     <Compile Include="Models\Granja.cs" />
     <Compile Include="Models\Perro.cs" />
     <Compile Include="Program.cs" />
