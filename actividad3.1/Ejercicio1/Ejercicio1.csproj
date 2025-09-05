@@ -58,6 +58,7 @@
     <Compile Include="Models\Gallina.cs" />
     <Compile Include="Models\Granja.cs" />
     <Compile Include="Models\Perro.cs" />
+    <Compile Include="Models\Zorro.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

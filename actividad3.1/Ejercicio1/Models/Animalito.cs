@@ -12,24 +12,22 @@ namespace Ejercicio1.Models
 
         bool tieneHambre;
         bool estaVivo;
-        
+        Random rnd = new Random();
+
         protected List<string> historialAcciones = new List<string>();
 
         public bool TieneHambre {   
             
             get
             {
-                Random rnd = new Random();
-                
-
-                return tieneHambre = rnd.Next(0,2) == 1;
+                return tieneHambre = rnd.Next(0,2) == 1; // pone aleatoriamente si tiene hambre o no cada ves que consulten
             }
 
 
             private set { } } 
        
         
-        public bool EstaVivo { get => estaVivo; private set => estaVivo = value; }
+        public bool EstaVivo { get => estaVivo;  set => estaVivo = value; }
 
 
         //public List<string> HistorialAcciones { get => historialAcciones; set => historialAcciones = value; }

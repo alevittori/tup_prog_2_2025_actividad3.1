@@ -37,5 +37,10 @@ namespace Ejercicio1.Models
             return pone.Next(0,1);
             
         }
+
+        public override string ToString()
+        {
+            return "Benteveo";
+        }
     }
 }

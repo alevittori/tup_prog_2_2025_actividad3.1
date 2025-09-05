@@ -37,8 +37,13 @@ namespace Ejercicio1.Models
 
         public override List<string> CorrerRutina()
         {
+            Comer();
             return historialAcciones;
             
+        }
+        public override string ToString()
+        {
+            return "Gallina";
         }
 
     }
