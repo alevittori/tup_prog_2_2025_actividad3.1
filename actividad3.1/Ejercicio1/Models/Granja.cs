@@ -25,15 +25,15 @@ namespace Ejercicio1.Models
 
         public Granja(string dueña, int cantidadDeRaciones)
         {
-            Encargada = dueña;
+            this.encargada = dueña;
             CantidadAlimento = cantidadDeRaciones;
 
             animalitosEnGranja.Add(new Perro());
             animalitosEnGranja.Add(new Benteveo());
             animalitosEnGranja.Add(new Gallina());
-            foreach (Ave a in animalitosEnGranja)
+            foreach (Animalito a in animalitosEnGranja)
             {
-                if (a is Ave) { soloAvesGranja.Add(a); }
+                if (a is Ave) { soloAvesGranja.Add((Ave)a); }
             }
             Zorro elZorro = new Zorro(soloAvesGranja);
             animalitosEnGranja.Add(elZorro);

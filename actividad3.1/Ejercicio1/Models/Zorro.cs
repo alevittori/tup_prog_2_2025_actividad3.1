@@ -46,15 +46,21 @@ namespace Ejercicio1.Models
                 ave.EstaVivo = false; // esta ave seria de la lista de aves vivas 
                                        // averiguar si se cambia el valor en lista animalGRanja
             }
+            else
+            {
+                historialAcciones.Add($" El Zorro, solo acecha, no tiene hambre");
+            }    
         }
 
 
 
-        public void RecorreGranja(List<Ave> listaAves) 
+        public void RecorreGranja() 
         {
             historialAcciones.Add("El Zorro sale a recorrer la granja...");
-            List<Ave> aves = MiraAveVivas(listaAves);
-            int elejir = random.Next(0, listaAves.Count);
+            List<Ave> aves = MiraAveVivas();
+            Ave elejir = ElegirAve(aves);
+            Comer(elejir);
+
 
         }
 
@@ -62,7 +68,10 @@ namespace Ejercicio1.Models
 
         public override List<string> CorrerRutina()
         {
-            throw new NotImplementedException();
+            this.RecorreGranja();
+
+
+            return historialAcciones;
         }
     }
 }
